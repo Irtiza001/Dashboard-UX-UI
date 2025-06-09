@@ -1,0 +1,305 @@
+body {
+    background-color: #f5f7fa;
+}
+
+.sidebar {
+    width: 300px;
+    background: linear-gradient(180deg, #180dad, #3d54da);
+    /* height: 100vh; */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.sidebar a:hover,
+.sidebar .active {
+    background-color: white;
+    color: #180dad;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.main-content {
+    margin-left: 50px;
+    padding: 20px;
+}
+
+.card-custom {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.card-custom-1{
+    height: 160px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.card-custom .options {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.card-custom-1 .options {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.square-indicator {
+    width: 20px;
+    height: 20px;
+    background-color: #180dad;
+
+    /* display: inline-block; */
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.product-card {
+    margin-bottom: 10px;
+    display: flex;
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+    /* padding: 15px; */
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h5 {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    font-size: 12px;
+
+    margin-bottom: 0;
+    color: #6c757d;
+}
+
+.top_productsConatiner {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+.text_top_products {
+    font-size: 18px;
+}
+
+.bar_title {
+    font-size: 14px;
+}
+
+.welcome_text {
+    font-size: 12px;
+}
+
+.Lucy_text {
+    font-size: 18;
+    font-weight: bold;
+}
+
+.balance-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 70px;
+    background-color: #ccc;
+    margin: 0 15px;
+}
+
+.btn_money {
+    background-color: #180dad;
+    color: white;
+}
+
+.balance-item {
+    text-align: center;
+}
+
+.status-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.status-available {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-pending {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-circle {
+    width: 40px;
+    /* Adjust size as needed */
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Soft shadow */
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: #180dad;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-upload {
+    background-color: #180dad;
+    color: white;
+
+}
+
+.referral-card {
+    width: 100%;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #2a9df4, #4ac4f3);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.referral-text {
+    flex: 1;
+}
+
+.referral-text h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.referral-text p {
+    font-size: 14px;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+.referral-btn {
+    background: white;
+    color: #180dad;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.referral-btn:hover {
+    background: #e0f3ff;
+}
+
+.referral-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background: url('./images/Data\ extraction-amico.svg') no-repeat center;
+    background-size: cover;
+    margin-left: 15px;
+}
+
+.text1 {
+    font-size: 13px;
+    text-align: center;
+}
+
+.btn_contact {
+    background-color: #180dad;
+    color: white;
+}
+.zigzag-line {
+width: 100px; /* Adjust width */
+height: 10px; /* Adjust height */
+background: repeating-linear-gradient(
+    -45deg,
+    #28a745, /* Zigzag color */
+    #28a745 5px,
+    transparent 5px,
+    transparent 10px
+);
+}
+.wave-container {
+position: relative;
+display: inline-block;
+}
+
+.shadow-effect {
+filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.progress-line {
+width: 60%;  /* Adjust based on percentage */
+height: 100%;
+background: #28a745; /* Green success color */
+border-radius: 4px;
+transform: rotate(-15deg); /* Slight tilt for diagonal effect */
+
+}

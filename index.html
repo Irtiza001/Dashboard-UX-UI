@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="./style.css" rel="stylesheet">
+
+<body>
+    <div class="d-flex px-2 py-3">
+        <div class="sidebar d-flex flex-column" style="">
+            <h4>
+                <img src="./images/logo.png" alt="Neuro Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+                Neuro.
+            </h4>
+            
+            <a href="#" class="active"><i class="fas fa-home"></i> Overview</a>
+            <a href="#"><i class="fas fa-box"></i> Products</a>
+            <a href="#"><i class="fas fa-bullhorn"></i> Campaigns</a>
+            <a href="#"><i class="fas fa-calendar-alt"></i> Schedules</a>
+            <a href="#"><i class="fas fa-dollar-sign"></i> Payouts</a>
+            <a href="#"><i class="fas fa-file-alt"></i> Statements</a>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+
+            <!-- Pushes the contact section to the bottom -->
+            <div class="mt-auto p-3" style="background-color: #180dad; color: white; border-radius: 10px;">
+                <p class="text1">Have any problems managing your dashboard?<br />Try contacting Customer Support.</p>
+                <button class="btn btn_contact w-100">
+                    <i class="fas fa-headset"></i> Contact Us
+                </button>
+            </div>
+        </div>
+
+        <div class="main-content w-100">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <span class="welcome_text ">Welcome Back,</span><br />
+                    <span class=" Lucy_text"> Lucy Lure</span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-upload  me-3"><i class="fas fa-upload"></i> Upload Product</button>
+                    <input type="text" class="form-control me-3" placeholder="Search..." style="width: 200px;">
+                    <div class="icon-container">
+                        <div class="icon-circle">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <span class="notification-badge">2</span>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-8">
+                    <div class="referral-card">
+                        <div class="referral-text">
+                            <h2>Want some EXTRA Money?</h2>
+                            <p>Refer a friend and earn 10% commission on every referral</p>
+                            <a href="#" class="referral-btn">Referral Program</a>
+                        </div>
+                        <div class="referral-image"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card card-custom-1 p-3">
+                                <div class="options"><i class="fas fa-ellipsis-h"></i></div>
+
+                                <div class="d-flex">
+                                    <span class="square-indicator"></span>
+                                    <h5 class="bar_title">Total Product</h5>
+                                </div>
+
+                                <div class="d-flex align-items-end">
+                                    <h2 class="mb-0">1,134</h2>
+                                    <p class="mb-1 ms-1">Items</p>
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="text-success">+10% this week</span>
+                                    <!-- Simple Line Bar -->
+                                    <svg class="snake-line shadow-effect" width="100" height="40" viewBox="0 0 100 40"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 35 C20 25, 40 45, 60 35 S80 25, 100 5" stroke="#28a745"
+                                            stroke-width="2" fill="transparent" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card  card-custom-1 p-3">
+                                <div class="options"><i class="fas fa-ellipsis-h"></i></div>
+
+                                <div class="d-flex">
+                                    <span class="square-indicator"></span>
+                                    <h5 class="bar_title">Total Earnings</h5>
+                                </div>
+
+                                <h2>$4,231</h2>
+
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="text-danger">-22% this week</span>
+                                    <!-- Snake Line (SVG) -->
+                                    <svg class="snake-line shadow-effect" width="100" height="40" viewBox="0 0 100 40"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 5 C20 15, 40 -5, 60 5 S80 15, 100 35" stroke="#dc3545"
+                                            stroke-width="2" fill="transparent" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pt-3">
+                            <div class="card card-custom">
+                                <div class="d-flex ">
+                                    <span class="square-indicator "></span>
+                                    <h5>Latest Download</h5>
+                                </div>
+                                <canvas id="lineChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="container top_productsConatiner py-3">
+                        <div class="d-flex ">
+                            <span class="square-indicator "></span>
+
+                            <h2 class="text-left mb-4 text_top_products">Top Products</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="product-card">
+                                    <div class="image-container"
+                                        style="background-color: #E3F2FD; border-radius: 10px; padding: 10px;">
+                                        <img src="./images/circle.png" alt="Product 1"
+                                            style="width: 48px; height: 48px; border-radius: 10px;">
+                                    </div>
+                                    <div class="product-info">
+                                        <h5>Niky-Icon 3D Pack</h5>
+                                        <p>3D Illustrations</p>
+                                    </div>
+                                    <i class="fas fa-chevron-right arrow-icon"></i> <!-- Greater than icon -->
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="product-card">
+                                    <div class="image-container"
+                                        style="background-color: #E8F5E9; border-radius: 10px; padding: 10px;">
+                                        <img src="./images/astro.png" alt="Product 2"
+                                            style="width: 100%; border-radius: 10px;">
+                                    </div>
+                                    <div class="product-info">
+                                        <h5>Like-3D Abstract</h5>
+                                        <p>3D Illustrations</p>
+                                    </div>
+                                    <i class="fas fa-chevron-right arrow-icon"></i> <!-- Greater than icon -->
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="product-card">
+                                    <div class="image-container"
+                                        style="background-color: #FFE0B2; border-radius: 10px; padding: 10px;">
+                                        <img src="./images/cube.png" alt="Product 3"
+                                            style="width: 100%; border-radius: 10px;">
+                                    </div>
+                                    <div class="product-info">
+                                        <h5>Cube 3D</h5>
+                                        <p>3D Illustrations</p>
+                                    </div>
+                                    <i class="fas fa-chevron-right arrow-icon"></i> <!-- Greater than icon -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="product-card">
+                                    <div class="image-container"
+                                        style="background-color: #BBDEFB; border-radius: 10px; padding: 10px;">
+                                        <img src="./images/man.png" alt="Product 4"
+                                            style="width: 100%; border-radius: 10px;">
+                                    </div>
+                                    <div class="product-info">
+                                        <h5>Heady-3D Head</h5>
+                                        <p>3D Illustrations</p>
+                                    </div>
+                                    <i class="fas fa-chevron-right arrow-icon"></i> <!-- Greater than icon -->
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="product-card">
+                                    <div class="image-container"
+                                        style="background-color: #D1C4E9; border-radius: 10px; padding: 10px;">
+                                        <img src="./images/helmet.png" alt="Product 5"
+                                            style="width: 48px; height: 48px; border-radius: 10px;">
+                                    </div>
+                                    <div class="product-info">
+                                        <h5>Astro Illustrations</h5>
+                                        <p>Illustrations</p>
+                                    </div>
+                                    <i class="fas fa-chevron-right arrow-icon"></i> <!-- Greater than icon -->
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="card card-custom">
+                            <div class="options"><i class="fas fa-ellipsis-h"></i></div>
+
+                            <div class="d-flex ">
+                                <span class="square-indicator "></span>
+
+                                <h2 class="text-left mb-1 text_top_products">Balance</h2>
+                            </div>
+                            <form>
+                                <div class="balance-container">
+                                    <div class="balance-item">
+                                        <h3>$537</h3>
+                                        <span class="status-tag status-available">Available</span>
+                                    </div>
+                                    <div class="vertical-line"></div>
+                                    <div class="balance-item">
+                                        <h3>$234</h3>
+                                        <span class="status-tag status-pending">Pending</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn_money w-100 mt-3">Withdraw Money</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('lineChart').getContext('2d');
+
+        const gradient = ctx.createLinearGradient(0, 100, 0, 250); // Reduce the gradient height
+        gradient.addColorStop(0, 'rgba(64, 224, 208, 0.5)'); // Strong turquoise near the line
+        gradient.addColorStop(0.3, 'rgba(64, 224, 208, 0.2)'); // Light fade
+        gradient.addColorStop(0.6, 'rgba(64, 224, 208, 0)'); // Completely disappears
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Downloads',
+                    data: [100, 200, 150, 300, 250, 400, 350],
+                    borderColor: '#6A0DAD', // Keep purple line
+                    borderWidth: 2,
+                    fill: true,
+                    backgroundColor: gradient, // Apply turquoise shadow
+                    tension: 0.4 // Smooth curve
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
